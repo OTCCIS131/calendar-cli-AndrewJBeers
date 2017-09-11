@@ -1,0 +1,23 @@
+{
+  "name": "lodash",
+  "version": "1.0.0",
+  "description": "lodash",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OTCCIS131/calendar-cli-AndrewJBeers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OTCCIS131/calendar-cli-AndrewJBeers/issues"
+  },
+  "homepage": "https://github.com/OTCCIS131/calendar-cli-AndrewJBeers#readme"
+}
