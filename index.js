@@ -27,9 +27,28 @@ console.log(now.year())
 let year = now.range('year')
 for(const month of year.by('months'))
     {
-        console.log(month)
+        console.log(_.pad(month.format('MMMM'), 25, '-'))
+         console.log('S   M   T   W   TH  F   S   ')
+ 
+    let days = Array.from(month.range('month').by('days'))
+    
+    let paddedDays = _.map(days, day => {
+        let date = day.date()
+        if (day.month()== 9 && day.date() == 10){
+            date = chalk.red(date)
+        }
+        return _.padEnd(date, 2, ' ')
+    })
+    console.log(paddedDays)
+    
+    //     console.log(days)
+    // _.chain(days)
+        
+    //     .map(day => {
+    //         console.log('here')
+    //         console.log(day)
+    //     })
     }
-
 
 
 
