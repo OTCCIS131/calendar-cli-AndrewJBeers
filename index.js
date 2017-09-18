@@ -14,7 +14,7 @@ for(const month of year.by('months'))
         console.log('S   M   T   W   TH  F   S   ')
         
         let days = Array.from(month.range('month').by('days'))
-        startOfMonth = days[0].format('e')
+        firstDay = days[0].format('e')
         let paddedDays = _.map(days, day => 
             {
             let date = day.date()
@@ -26,12 +26,12 @@ for(const month of year.by('months'))
             }
             return _.padEnd(date, 2, ' ')
         })
-        for ( i = startOfMonth; i > 0; i-- ){
+        for ( i = firstDay; i > 0; i-- ){
             paddedDays.unshift("  ")
         }
         paddedDays = _.chunk(paddedDays, 7)
         for (i = 0; i<paddedDays.length; i ++){
-            console.log(paddedDays[i].join('  '))
+            console.log(_.join(paddedDays[i],'  '))
         }
         console.log('\n')
     }
